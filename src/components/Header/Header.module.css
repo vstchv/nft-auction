@@ -1,0 +1,12 @@
+.headerContainer {
+	justify-content: space-between;
+	align-items: center;
+	display: flex;
+}
+
+.gridItem {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+}

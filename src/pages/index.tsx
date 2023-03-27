@@ -1,6 +1,6 @@
 import { Button, Typography } from '@mui/material';
 
-import Header from '@/components/Header';
+import Header from '@/components/Header/Header';
 import { Inter } from 'next/font/google';
 import Logo from '@/components/Logo';
 
