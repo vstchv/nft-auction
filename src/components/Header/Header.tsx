@@ -22,7 +22,7 @@ const Header = () => {
         <Grid item xs={3} className={styles.gridItem}>
           <Logo />
         </Grid>
-        <Grid item xs={3} className={styles.gridItem}>
+        <Grid item xs={5} className={styles.gridItem}>
           <FormControl>
             <TextField
               id="search"
@@ -39,7 +39,7 @@ const Header = () => {
             />
           </FormControl>
         </Grid>
-        <Grid item xs={3} className={styles.gridItem}>
+        <Grid item xs={4} className={styles.gridItem}>
           <Button className={styles.links} href="/home">
             Home
           </Button>
