@@ -1,5 +1,7 @@
 # BUM: An NFT Auction Platform
 
+This project is a task from Boom.dev[https://boom.dev/?redirect=1] from the React Developer track.
+
 BUM is an NFT Auction Platform. The goal of the platform is to make selling NFT's accessible to a wider audience. In the platform, users have profiles that show their collection of NFT's which they've purchased. Users can also place bids in Ethereum on the NFT's. You can also discover popular and trending auctions on the Home and on the Explore page.
 
 ## Technologies Used
