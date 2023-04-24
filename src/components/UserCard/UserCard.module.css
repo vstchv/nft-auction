@@ -1,0 +1,17 @@
+.user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+.name {
+  font-weight: 10rem;
+  color: var(--text_primary);
+}
+
+/* 
+.info {
+  color: $gray-600;
+} */

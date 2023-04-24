@@ -1,19 +1,10 @@
-import {
-  Button,
-  Container,
-  FormControl,
-  InputAdornment,
-  Link,
-  MenuItem,
-  TextField,
-} from "@mui/material";
+import { Button, FormControl, InputAdornment, TextField } from "@mui/material";
 
 import Grid from "@mui/material/Grid";
 import Logo from "../Logo";
 import React from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import styles from "./Header.module.css";
-import theme from "../../../utils/theme";
 
 const Header = () => {
   return (
