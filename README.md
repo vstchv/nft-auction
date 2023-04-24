@@ -7,9 +7,9 @@ BUM is an NFT Auction Platform. The goal of the platform is to make selling NFT'
 ## Technologies Used
 
 - TypeScript
-- Tailwind CSS
 - Next.js
-- React
+- Tailwind CSS
+- Material UI
 
 ## Installation
 
