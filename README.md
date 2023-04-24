@@ -14,10 +14,10 @@ BUM is an NFT Auction Platform. The goal of the platform is to make selling NFT'
 ## Installation
 
 1. Clone the repository
-2. Install the dependencies by running `npm install`
-3. Start the development server by running `npm run dev`
+2. Install the dependencies by running `yarn install`
+3. Start the development server by running `yarn dev`
 
-Make sure you have Node version 16.13.0 or later and NPM version 8.1.0 or later installed on your machine.
+Make sure you have Node version 16.13.0 or later and yarn installed on your machine.
 
 ## Pages
 
