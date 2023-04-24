@@ -1,38 +1,42 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# BUM: An NFT Auction Platform
 
-## Getting Started
+BUM is an NFT Auction Platform. The goal of the platform is to make selling NFT's accessible to a wider audience. In the platform, users have profiles that show their collection of NFT's which they've purchased. Users can also place bids in Ethereum on the NFT's. You can also discover popular and trending auctions on the Home and on the Explore page.
 
-First, run the development server:
+## Technologies Used
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+- TypeScript
+- Tailwind CSS
+- Next.js
+- React
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Installation
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+1. Clone the repository
+2. Install the dependencies by running `npm install`
+3. Start the development server by running `npm run dev`
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Make sure you have Node version 16.13.0 or later and NPM version 8.1.0 or later installed on your machine.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Pages
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+The project is split into several pages, each of which serves a specific purpose:
 
-## Learn More
+### Home
 
-To learn more about Next.js, take a look at the following resources:
+The main goal of the Home page is to showcase the most important NFT's available on the platform. It contains a "Featured" section that shows all featured NFT's by the platform administrators. It also has trending sections which show the most visited and bet on NFT's and "Top Collectors" section which shows the users with the most items in their collection. Also present is an info section on how the platform works and a "Live Auctions" section which shows the auctions which are currently open.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Product
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+The product page shows detailed information about the NFT like - its creator, its description, and all the bids that have been made. The product section has basically two states - "ended" and "live". When the auction for the NFT is open the state is "live" and a time left on the auction is shown. Users can also like the NFT and place bids on it via their respective buttons.
 
-## Deploy on Vercel
+### Profile
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The profile page shows basic information about the user like his or her username, description, avatar, cover image, and collection. The collection is displayed by a list of cards and can be sorted, filtered by a price range, and searched by name.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Activity
+
+The activity page shows all the actions performed by the users. Actions include likes, bids, and purchases. The activity list can be filtered by type, sorted and searched by name. All user activity is public and is shown in the activity list.
+
+### Explore
+
+On the explore page you can browse all available NFT's in the platform. NFT's can be filtered by name, whether they are active or not, sorted by price, title, and likes. The explore page shows NFT which currently has active auctions as well as the ones which have ended auctions.
