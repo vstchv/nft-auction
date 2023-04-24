@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --primary_main: #4e24f2;
   --secondary_main: #24f25e;
