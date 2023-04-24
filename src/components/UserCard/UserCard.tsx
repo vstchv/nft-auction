@@ -18,7 +18,7 @@ const UserCard: FC<UserProps> = ({
   verified = false,
 }) => {
   return (
-    <div className={styles.user}>
+    <div className="flex items-center">
       <Avatar image={avatar} size={size} verified={verified} />
       <div className={styles.name}>{name}</div>
       {info && <div className={styles.info}>{info}</div>}
