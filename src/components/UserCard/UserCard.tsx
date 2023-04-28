@@ -1,6 +1,5 @@
 import React, { FC } from "react";
 import Avatar from "../Avatar/Avatar";
-import styles from "./UserCard.module.css";
 
 interface UserProps {
   name: string;
@@ -18,10 +17,12 @@ const UserCard: FC<UserProps> = ({
   verified = false,
 }) => {
   return (
-    <div className="flex items-center">
+    <div className="flex justify-start items-start">
       <Avatar image={avatar} size={size} verified={verified} />
-      <div className={styles.name}>{name}</div>
-      {info && <div className={styles.info}>{info}</div>}
+      <div className="flex flex-col ml-3">
+        <h3 className="font-black">{name}</h3>
+        {info && <span className="text-secondary-main text-sm">{info}</span>}
+      </div>
     </div>
   );
 };

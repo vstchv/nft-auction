@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <UserCard name="terika77" verified info="134 Items" size={90} />
+      <UserCard name="terika77" verified info="134 Items" size={55} />
     </>
   );
 }
