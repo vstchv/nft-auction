@@ -17,7 +17,7 @@ const Avatar = ({ size = 90, verified, image }: AvatarProps) => {
           className={styles.badge}
           alt="verifiedBadge"
         />
-      )}{" "}
+      )}
     </div>
   );
 };

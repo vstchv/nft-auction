@@ -1,14 +1,6 @@
 import React, { FC } from "react";
 import Avatar from "../Avatar/Avatar";
 
-interface UserProps {
-  name: string;
-  info?: string;
-  avatar?: string;
-  size?: number;
-  verified?: boolean;
-}
-
 const UserCard: FC<UserProps> = ({
   name = "",
   info = "",
@@ -26,5 +18,13 @@ const UserCard: FC<UserProps> = ({
     </div>
   );
 };
+
+interface UserProps {
+  name: string;
+  info?: string;
+  avatar?: string;
+  size?: number;
+  verified?: boolean;
+}
 
 export default UserCard;
