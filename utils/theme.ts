@@ -1,13 +1,6 @@
-import { ThemeOptions, TypeText, createTheme } from "@mui/material/styles";
+import { createTheme } from "@mui/material/styles";
 
-interface CustomTypeText extends TypeText {
-  primary: string;
-  secondary: string;
-  disabled: string;
-  hint: string;
-}
-
-const theme: ThemeOptions = createTheme({
+const theme = createTheme({
   spacing: 12,
   palette: {
     mode: "dark",
@@ -111,7 +104,7 @@ const theme: ThemeOptions = createTheme({
     },
     h5: {
       fontSize: "1.1rem",
-      fontWeight: 700,
+      fontWeight: 900,
     },
     h6: {
       fontSize: "1rem",

@@ -1,10 +1,12 @@
 import React, { FC } from "react";
 import Avatar from "../Avatar/Avatar";
+import AvatarPlaceholder from "../../resources/avatar.png";
+import UserProps from "@/models/UserProps";
 
 const UserCard: FC<UserProps> = ({
   name = "",
   info = "",
-  avatar = "",
+  avatar = AvatarPlaceholder,
   size = 55,
   verified = false,
 }) => {
@@ -18,13 +20,5 @@ const UserCard: FC<UserProps> = ({
     </div>
   );
 };
-
-interface UserProps {
-  name: string;
-  info?: string;
-  avatar?: string;
-  size?: number;
-  verified?: boolean;
-}
 
 export default UserCard;

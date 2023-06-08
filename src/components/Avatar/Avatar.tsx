@@ -1,8 +1,9 @@
 import React from "react";
 import Image from "next/image";
-import AvatarImg from "../../resources/avatar.png";
+import AvatarPlaceholder from "../../resources/avatar.png";
 import VerifiedBadge from "../../resources/verified.svg";
 import styles from "./Avatar.module.css";
+import AvatarProps from "@/models/AvatarProps";
 
 const Avatar = ({ size = 90, verified, image }: AvatarProps) => {
   return (
@@ -10,7 +11,12 @@ const Avatar = ({ size = 90, verified, image }: AvatarProps) => {
       className={styles.avatarContainer}
       style={{ width: size, height: size }}
     >
-      <Image src={AvatarImg || image} className={styles.avatar} alt="avatar" />
+      <Image
+        src={AvatarPlaceholder || image}
+        className={styles.avatar}
+        alt="avatar"
+        fill={true}
+      />
       {verified && (
         <Image
           src={VerifiedBadge}
@@ -21,11 +27,5 @@ const Avatar = ({ size = 90, verified, image }: AvatarProps) => {
     </div>
   );
 };
-
-interface AvatarProps {
-  image?: string; // not sure if this is the right type or should I pass the image as a prop?
-  size?: number;
-  verified?: boolean;
-}
 
 export default Avatar;
