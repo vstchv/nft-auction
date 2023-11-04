@@ -5,10 +5,10 @@ import SearchIcon from "@mui/icons-material/Search";
 const SearchBar: FC<SearchBar> = () => {
   return (
     <>
-      <FormControl size="medium">
+      <FormControl>
         <TextField
-          id="search"
-          type="search"
+          // id="search"
+          //type="search"
           placeholder="Find items"
           InputProps={{
             startAdornment: (

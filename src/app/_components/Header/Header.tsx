@@ -1,10 +1,7 @@
-import { Button, FormControl, InputAdornment, TextField } from "@mui/material";
-
-import Grid from "@mui/material/Grid";
+import { Grid, Button } from "@mui/material";
 import Logo from "../Logo";
-import React from "react";
-import styles from "./Header.module.css";
 import SearchBar from "../SearchBar/SearchBar";
+import styles from "./Header.module.css";
 
 const Header = () => {
   return (
@@ -17,7 +14,7 @@ const Header = () => {
           <SearchBar />
         </Grid>
         <Grid item xs={4} className={styles.gridItem}>
-          <Button className={styles.links} href="/home">
+          <Button className={styles.links} href="/">
             Home
           </Button>
           <Button className={styles.links} href="/explore">

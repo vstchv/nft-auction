@@ -1,3 +1,5 @@
+@value test: #ff0000;
+
 .headerContainer {
   justify-content: space-between;
   align-items: center;
@@ -6,13 +8,6 @@
   padding-top: 10px;
   padding-bottom: 10px;
 }
-
-/* .gridItem {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-} */
 
 .links {
   color: var(--text_primary);
