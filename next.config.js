@@ -1,9 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-	reactStrictMode: true,
+  reactStrictMode: true,
+  experimental: { appDir: true },
 };
-module.exports = {
-	...nextConfig,
-	// Add global CSS file to be imported in all components
-	css: ['~/styles/globals.css'],
-};
+
+module.exports = nextConfig;

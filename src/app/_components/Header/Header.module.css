@@ -7,19 +7,15 @@
   padding-bottom: 10px;
 }
 
-.gridItem {
+/* .gridItem {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
-}
+} */
 
 .links {
   color: var(--text_primary);
   text-decoration: none;
   font-size: 14px;
-}
-
-.searchBar {
-  width: 20vw;
 }

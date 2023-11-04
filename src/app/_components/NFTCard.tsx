@@ -6,7 +6,7 @@ import Image from "next/image";
 import millify from "millify";
 import Avatar from "./Avatar/Avatar";
 import NFTCardProps from "@/models/NFTCardProps";
-import theme from "utils/theme";
+import theme from "src/app/_themeRegistry/theme";
 
 const NFTCard: FC<NFTCardProps> = ({
   name = "Clock",
