@@ -1,10 +1,14 @@
 import { StaticImageData } from "next/image";
 
 interface UserProps {
-  name: string;
-  info?: string;
   avatar?: string | StaticImageData;
+
+  info?: string;
+
+  name: string;
+
   size?: number;
+
   verified?: boolean;
 }
 

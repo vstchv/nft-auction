@@ -1,12 +1,14 @@
 "use client";
-import { ThemeProvider } from "@emotion/react";
+
+import "react-toastify/dist/ReactToastify.css";
+
 import { CssBaseline } from "@mui/material";
 import NextAppDirEmotionCacheProvider from "./EmotionCache";
-import theme from "./theme";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import React from "react";
 import ReactQueryWrapper from "../_reactQuery/ReactQueryWrapper";
+import { ThemeProvider } from "@emotion/react";
+import { ToastContainer } from "react-toastify";
+import theme from "./theme";
 
 export default function Providers({ children }: { children: React.ReactNode }) {
   return (

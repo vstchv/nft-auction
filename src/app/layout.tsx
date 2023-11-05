@@ -1,7 +1,8 @@
-import Header from "./_components/Header/Header";
-import ThemeRegistry from "./_providers/_themeRegistry/ThemeRegisty";
 import "../app/_styles/global.css";
+
+import Header from "./_components/Header/Header";
 import Providers from "./_providers/_themeRegistry/Providers";
+import ThemeRegistry from "./_providers/_themeRegistry/ThemeRegisty";
 
 export default function RootLayout({
   children,

@@ -1,11 +1,11 @@
-import React, { FC } from "react";
 import { Chip, Typography } from "@mui/material";
-import FavoriteIcon from "@mui/icons-material/Favorite";
+import React, { FC } from "react";
 
-import Image from "next/image";
-import millify from "millify";
 import Avatar from "./Avatar/Avatar";
-import NFTCardProps from "@/models/NFTCardProps";
+import FavoriteIcon from "@mui/icons-material/Favorite";
+import Image from "next/image";
+import NFTCardProps from "../_models/NFTCardProps";
+import millify from "millify";
 import theme from "@/app/_providers/_themeRegistry/theme";
 
 const NFTCard: FC<NFTCardProps> = ({

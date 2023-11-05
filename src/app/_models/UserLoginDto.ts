@@ -1,5 +1,6 @@
 interface UserLoginDto {
-  username: string;
   password: string;
+
+  username: string;
 }
 export default UserLoginDto;

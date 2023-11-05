@@ -1,15 +1,8 @@
-import NFTCardProps from "@/models/NFTCardProps";
-import {
-  Container,
-  FormControl,
-  Grid,
-  InputLabel,
-  MenuItem,
-  Select,
-  Typography,
-} from "@mui/material";
+import { Container, Grid, MenuItem, Select, Typography } from "@mui/material";
+
 import { FC } from "react";
 import NFTCard from "../NFTCard";
+import NFTCardProps from "@/app/_models/NFTCardProps";
 
 const TrendingSection: FC<TrendingSectionProps> = ({
   cards = [],

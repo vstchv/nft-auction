@@ -1,4 +1,5 @@
-import { Grid, Button } from "@mui/material";
+import { Button, Grid } from "@mui/material";
+
 import Logo from "../Logo";
 import SearchBar from "../SearchBar/SearchBar";
 import styles from "./Header.module.css";

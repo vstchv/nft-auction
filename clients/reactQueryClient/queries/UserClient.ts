@@ -1,20 +1,15 @@
-import { AxiosError, AxiosResponse, AxiosInstance } from "axios";
-import {
-  UseMutationResult,
-  UseQueryResult,
-  useQuery,
-  useMutation,
-} from "@tanstack/react-query";
-import { QueryOptions } from "../config/QueryOptions";
+import { AxiosError, AxiosInstance, AxiosResponse } from "axios";
+import { UseMutationResult, useMutation } from "@tanstack/react-query";
+
+import { MutationOptionsWithError } from "../config/MutationOptions";
 import { QueryKeys } from "./QueryKeys";
 import UserLoginDto from "@/app/_models/UserLoginDto";
-import { MutationOptions } from "../config/MutationOptions";
 
 export interface UserQueryClient {
   postUserLogin: (body: UserLoginDto) => Promise<string>;
   useUserLogin: (
-    options?: MutationOptions<string, UserLoginDto>
-  ) => UseMutationResult<string, AxiosError, UserLoginDto>;
+    options?: MutationOptionsWithError<string, UserLoginDto>
+  ) => UseMutationResult<string, AxiosError<ApiErrorResponse>, UserLoginDto>;
 }
 
 export function createUserQueryClient(axios: AxiosInstance): UserQueryClient {
@@ -32,9 +27,9 @@ class UserImplementation {
       });
   };
   public useUserLogin = (
-    options?: MutationOptions<string, UserLoginDto>
-  ): UseMutationResult<string, AxiosError, UserLoginDto> => {
-    return useMutation<string, AxiosError, UserLoginDto>(
+    options?: MutationOptionsWithError<string, UserLoginDto>
+  ): UseMutationResult<string, AxiosError<ApiErrorResponse>, UserLoginDto> => {
+    return useMutation<string, AxiosError<ApiErrorResponse>, UserLoginDto>(
       [QueryKeys.UseUserLogin],
       (body) => this.postUserLogin(body),
       options

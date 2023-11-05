@@ -1,7 +1,8 @@
 import React, { FC } from "react";
+
 import Avatar from "../Avatar/Avatar";
 import AvatarPlaceholder from "../../resources/avatar.png";
-import UserProps from "@/models/UserProps";
+import UserProps from "@/app/_models/UserProps";
 
 const UserCard: FC<UserProps> = ({
   name = "",

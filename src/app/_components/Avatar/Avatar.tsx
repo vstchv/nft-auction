@@ -1,9 +1,9 @@
-import React from "react";
-import Image from "next/image";
 import AvatarPlaceholder from "../../resources/avatar.png";
+import AvatarProps from "@/app/_models/AvatarProps";
+import Image from "next/image";
+import React from "react";
 import VerifiedBadge from "../../resources/verified.svg";
 import styles from "./Avatar.module.css";
-import AvatarProps from "@/models/AvatarProps";
 
 const Avatar = ({ size = 90, verified, image }: AvatarProps) => {
   return (

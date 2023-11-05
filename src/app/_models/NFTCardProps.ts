@@ -1,17 +1,22 @@
 import { StaticImageData } from "next/image";
 
 interface NFTCardProps {
-  name?: string;
+  currency?: string;
+
   likes?: number;
+
   mediaUrl?: string | StaticImageData;
+
+  name?: string;
+
+  price?: string;
+
   user?: {
     avatar: {
       url: string | StaticImageData;
     };
     verified?: boolean;
   };
-  price?: string;
-  currency?: string;
 }
 
 export default NFTCardProps;
