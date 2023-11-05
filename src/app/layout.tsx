@@ -1,6 +1,7 @@
 import Header from "./_components/Header/Header";
-import ThemeRegistry from "./_themeRegistry/ThemeRegisty";
+import ThemeRegistry from "./_providers/_themeRegistry/ThemeRegisty";
 import "../app/_styles/global.css";
+import Providers from "./_providers/_themeRegistry/Providers";
 
 export default function RootLayout({
   children,
@@ -11,10 +12,10 @@ export default function RootLayout({
     <>
       <html lang="en">
         <body>
-          <ThemeRegistry>
+          <Providers>
             <Header />
-            {children}
-          </ThemeRegistry>
+            <div className="h-full overflow-auto flex-1">{children}</div>
+          </Providers>
         </body>
       </html>
     </>
