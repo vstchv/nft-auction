@@ -1,8 +1,26 @@
+"use client";
 import { Button, FormControl, TextField, Typography } from "@mui/material";
 import Link from "next/link";
 import { FC } from "react";
+import { useMemo, useState } from "react";
+import { toast } from "react-toastify";
+import { UserQueryClient } from "clients/clients";
 
 const Login: FC = () => {
+  const [username, setUsername] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+
+  const { useUserLogin } = useMemo(() => UserQueryClient, []);
+
+  const { mutate: loginUser } = useUserLogin({
+    onSuccess: () => {
+      toast.success("Login successful");
+    },
+    onError: (error) => {
+      toast.error(error.response?.data.message);
+    },
+  });
+
   return (
     <div className="flex justify-center items-center p-20">
       <div className=" bg-background-paper rounded-lg p-20 space-y-4">
@@ -19,6 +37,7 @@ const Login: FC = () => {
             variant="outlined"
             color="primary"
             required
+            onChange={(e) => setUsername(e.target.value)}
           />
           <TextField
             id="password"
@@ -26,11 +45,16 @@ const Login: FC = () => {
             variant="outlined"
             color="primary"
             required
+            onChange={(e) => setPassword(e.target.value)}
           />
           <Link className="underline" href="/register">
             Don&apos;t have an account? Register
           </Link>
-          <Button variant="contained" color="primary">
+          <Button
+            onClick={() => loginUser({ username, password })}
+            variant="contained"
+            color="primary"
+          >
             Login
           </Button>
         </FormControl>
