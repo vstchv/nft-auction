@@ -18,7 +18,7 @@ export default function Providers({ children }: { children: React.ReactNode }) {
           <ReactQueryWrapper>
             <CssBaseline />
             {children}
-            <ToastContainer />
+            <ToastContainer position="bottom-center" />
           </ReactQueryWrapper>
         </ThemeProvider>
       </NextAppDirEmotionCacheProvider>
