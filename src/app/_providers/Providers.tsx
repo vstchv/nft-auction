@@ -2,13 +2,14 @@
 
 import "react-toastify/dist/ReactToastify.css";
 
+import AuthProvider from "./_authProvider/AuthProvider";
 import { CssBaseline } from "@mui/material";
-import NextAppDirEmotionCacheProvider from "./EmotionCache";
+import NextAppDirEmotionCacheProvider from "./_themeRegistry/EmotionCache";
 import React from "react";
-import ReactQueryWrapper from "../_reactQuery/ReactQueryWrapper";
+import ReactQueryWrapper from "./_reactQuery/ReactQueryWrapper";
 import { ThemeProvider } from "@emotion/react";
 import { ToastContainer } from "react-toastify";
-import theme from "./theme";
+import theme from "./_themeRegistry/theme";
 
 export default function Providers({ children }: { children: React.ReactNode }) {
   return (
@@ -16,9 +17,11 @@ export default function Providers({ children }: { children: React.ReactNode }) {
       <NextAppDirEmotionCacheProvider options={{ key: "mui" }}>
         <ThemeProvider theme={theme}>
           <ReactQueryWrapper>
-            <CssBaseline />
-            {children}
-            <ToastContainer position="bottom-center" />
+            <AuthProvider>
+              <CssBaseline />
+              {children}
+              <ToastContainer position="bottom-center" />
+            </AuthProvider>
           </ReactQueryWrapper>
         </ThemeProvider>
       </NextAppDirEmotionCacheProvider>

@@ -1,17 +1,14 @@
+" use client";
+
 import { Button, Grid } from "@mui/material";
+import { FC, useEffect } from "react";
 
 import Logo from "../Logo";
 import SearchBar from "../SearchBar/SearchBar";
 import styles from "./Header.module.css";
+import useAuth from "@/app/_context/useAuth";
 
-const Header = ({ isLoggedIn = false }) => {
-  const links = [
-    { text: "Home", href: "/" },
-    { text: "Explore", href: "/explore" },
-    { text: "Login", href: "/login" },
-    { text: "Profile", href: "/profile", isVisible: isLoggedIn },
-  ];
-
+const Header: FC<HeaderProps> = ({ links }: HeaderProps) => {
   return (
     <Grid container className={styles.headerContainer}>
       <Grid item xs={3} className={styles.gridItem}>
@@ -21,21 +18,35 @@ const Header = ({ isLoggedIn = false }) => {
         <SearchBar />
       </Grid>
       <Grid item xs={4} className={styles.gridItem}>
-        {links
-          .filter((link) => link.isVisible !== false)
-          .map((link, index) => (
-            <Button
-              key={index}
-              color="inherit"
-              className={styles.links}
-              href={link.href}
-            >
-              {link.text}
-            </Button>
-          ))}
+        <div className="flex justify-end space-x-4">
+          {links.map((link) => {
+            if (link.isVisible == undefined || link.isVisible == true) {
+              return (
+                <Button
+                  key={link.text}
+                  variant="text"
+                  color="primary"
+                  href={link.href}
+                >
+                  {link.text}
+                </Button>
+              );
+            }
+          })}
+        </div>
       </Grid>
     </Grid>
   );
 };
+
+interface HeaderProps {
+  links: Link[];
+}
+
+interface Link {
+  text: string;
+  href: string;
+  isVisible?: boolean;
+}
 
 export default Header;

@@ -1,25 +1,35 @@
 "use client";
 
 import { Button, FormControl, TextField, Typography } from "@mui/material";
-import { useMemo, useState } from "react";
+import { useContext, useMemo, useState } from "react";
 
+import AuthContext from "@/app/_context/AuthContext";
 import { FC } from "react";
 import Link from "next/link";
 import { UserQueryClient } from "clients/clients";
 import { toast } from "react-toastify";
+import useAuth from "@/app/_context/useAuth";
+import { useRouter } from "next/navigation";
 
 const Login: FC = () => {
   const [username, setUsername] = useState<string>("");
   const [password, setPassword] = useState<string>("");
+  const router = useRouter();
+  const { login } = useAuth();
 
   const { useUserLogin } = useMemo(() => UserQueryClient, []);
 
   const { mutate: loginUser } = useUserLogin({
-    onSuccess: () => {
-      toast.success("Login successful");
+    onSuccess: (data) => {
+      toast.success("Login successful", { autoClose: 2000 });
+      login(data);
     },
     onError: (error) => {
-      toast.error(error.response?.data.message);
+      toast.error(
+        error.response?.data.message
+          ? error.response.data.message
+          : error.message
+      );
     },
   });
 
@@ -56,6 +66,7 @@ const Login: FC = () => {
             onClick={() => loginUser({ username, password })}
             variant="contained"
             color="primary"
+            href="/"
           >
             Login
           </Button>
