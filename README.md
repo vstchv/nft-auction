@@ -10,6 +10,7 @@ BUM is an NFT Auction Platform. The goal of the platform is to make selling NFT'
 - Next.js
 - Material UI
 - Tailwind CSS
+- React Query
 
 ## Installation
 
@@ -35,9 +36,6 @@ The product page shows detailed information about the NFT like - its creator, it
 
 The profile page shows basic information about the user like his or her username, description, avatar, cover image, and collection. The collection is displayed by a list of cards and can be sorted, filtered by a price range, and searched by name.
 
-### Activity
-
-The activity page shows all the actions performed by the users. Actions include likes, bids, and purchases. The activity list can be filtered by type, sorted and searched by name. All user activity is public and is shown in the activity list.
 
 ### Explore
 
