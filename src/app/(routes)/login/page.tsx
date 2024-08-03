@@ -22,7 +22,9 @@ const Login: FC = () => {
   const { mutate: loginUser } = useUserLogin({
     onSuccess: (data) => {
       toast.success("Login successful", { autoClose: 2000 });
+      console.log(data);
       login(data);
+      router.push('/');
     },
     onError: (error) => {
       toast.error(
@@ -66,7 +68,7 @@ const Login: FC = () => {
             onClick={() => loginUser({ username, password })}
             variant="contained"
             color="primary"
-            href="/"
+
           >
             Login
           </Button>

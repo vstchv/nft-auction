@@ -16,6 +16,7 @@ const AuthProvider: FC<AuthProviderProps> = ({
   const handleLogin = (user: string) => {
     setUser(user);
     localStorage.setItem("user", user);
+    console.log(user)
   };
 
   return (

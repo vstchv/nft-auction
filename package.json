@@ -24,6 +24,7 @@
     "eslint-config-next": "14.0.1",
     "millify": "6.1.0",
     "next": "14.0.1",
+    "next-auth": "4.24.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-toastify": "^9.1.3",
