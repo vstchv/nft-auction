@@ -12,14 +12,14 @@ const AuthProvider: FC<AuthProviderProps> = ({
   const [token, setToken] = useState<string | null>(null);
   const [loading, setLoading] = useState<boolean>(true); // Add loading state
 
-  useEffect(() => {
-    const storedToken = localStorage.getItem("token");
-    if (storedToken) {
-      setToken(storedToken);
-      setUser(storedToken); // Replace with logic to decode the token and set user data
-    }
-    setLoading(false); // Set loading to false once the check is complete
-  }, []);
+  // useEffect(() => {
+  //   const storedToken = localStorage.getItem("token");
+  //   if (storedToken) {
+  //     setToken(storedToken);
+  //     setUser(storedToken); // Replace with logic to decode the token and set user data
+  //   }
+  //   setLoading(false); // Set loading to false once the check is complete
+  // }, []);
 
   const handleLogin = (token: string) => {
     console.log("login", token);

@@ -1,18 +1,13 @@
-"use client";
-
-import { useEffect, useState } from "react";
-
 import Header from "./Header";
-import useAuth from "@/app/_context/useAuth";
+import { getSession } from "lib";
 
-const HeaderWrapper = () => {
-  const { user } = useAuth();
-
+const HeaderWrapper = async () => {
+  const session = await getSession();
   const links: Link[] = [
     { text: "Home", href: "/" },
     { text: "Explore", href: "/explore" },
     { text: "Login", href: "/login" },
-    { text: "Profile", href: "/profile", isVisible: user ? true : false },
+    { text: "Profile", href: "/profile", isVisible: session ? true : false },
   ];
   return (
     <>
