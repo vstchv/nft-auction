@@ -1,6 +1,5 @@
 import "../app/_styles/global.css";
 
-import Header from "./_components/Header/Header";
 import HeaderWrapper from "./_components/Header/HeaderWrapper";
 import Providers from "./_providers/Providers";
 
